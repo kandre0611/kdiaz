@@ -1,0 +1,113 @@
+program funcion3;
+uses crt;
+type
+ matriz=array[1..4] of int64;
+var
+na:integer;
+nb:integer;
+n:matriz;
+mayor:integer;
+menor:integer;
+procedure opcion1;
+begin
+    writeln(mayor);
+    writeln(na);
+    writeln(nb);
+    writeln(menor);
+end;
+procedure opcion2;
+begin
+    writeln(mayor);
+    writeln(nb);
+    writeln(na);
+    writeln(menor);
+end;
+procedure opcion3;
+begin
+    writeln(mayor);
+    writeln(na);
+    writeln(na);
+    writeln(menor);
+end;
+procedure opcion4;
+begin
+    writeln(mayor);
+    writeln(nb);
+    writeln(nb);
+    writeln(menor);
+end;
+begin 
+Clrscr;
+WriteLn ('------------------------------------------------------');
+WriteLn ('Este programa te va a permitir descubrir ');
+WriteLn ('cuál es el número más alto y más bajo entre');
+WriteLn ('cuatro valores ingresados por usted');
+WriteLn ('------------------------------------------------------');
+WriteLn ('Si desea continuar, presione enter');
+Readkey;
+    begin
+    writeln('Ingrese el primer numero');
+    readln(n[1]);
+    writeln('Ingrese el segundo numero');
+    readln(n[2]);
+    writeln('Ingrese el tercer numero');
+    readln(n[3]);
+    writeln('Ingrese el cuarto numero');
+    readln(n[4]);
+    end;
+    begin 
+    if (n[1]>n[2]) and (n[1]>n[3]) and (n[1]>n[4]) then
+    mayor:= n[1];
+    if (n[2]>n[1]) and (n[2]>n[3]) and (n[2]>n[4]) then
+    mayor:= n[2];
+    if (n[3]>n[1]) and (n[3]>n[2]) and (n[3]>n[4]) then
+    mayor:= n[3];
+    if (n[4]>n[1]) and (n[4]>n[2]) and (n[4]>n[3]) then
+    mayor:= n[4];
+ 
+    end;  
+    begin 
+    if (n[1]<n[2]) and (n[1]<n[3]) and (n[1]<n[4]) then
+    menor:= n[1];
+    if (n[2]<n[1]) and (n[2]<n[3]) and (n[2]<n[4]) then
+    menor:= n[2];
+    if (n[3]<n[1]) and (n[3]<n[2]) and (n[3]<n[4]) then
+    mayor:= n[3];
+    if (n[4]<n[1]) and (n[4]<n[2]) and (n[4]<n[3]) then
+    menor:= n[4];
+    end;
+    begin 
+    if (n[1]<mayor) and (n[1]>menor) then
+    na:= n[1];
+    if (n[2]<mayor) and (n[2]>menor) then
+    na:= n[2];
+    if (n[3]<mayor) and (n[3]>menor) then
+    na:= n[3];
+    if (n[4]<mayor) and (n[4]>menor) then
+    na:= n[4];
+    end;
+    begin 
+    if (n[1]<>mayor) and (n[1]<>menor) and (n[1]<>na) then
+    nb:= n[1];
+    if (n[2]<>mayor) and (n[2]<>menor) and (n[2]<>na) then 
+    nb:= n[2];
+    if (n[3]<>mayor) and (n[3]<>menor) and (n[3]<>na) then
+    nb:= n[3];
+    if (n[4]<>mayor) and (n[4]<>menor) and (n[4]<>na) then
+    nb:= n[4];
+    end;
+    begin
+    writeln;
+    writeln('ORDEN');
+    if (na=0) then
+    opcion4()
+    else if (nb=0) then
+    opcion3()
+    else if (na>nb) then
+    opcion1()
+  else  if (na<nb) then
+    opcion2()
+  else  if (na=nb) then
+    opcion3();
+    end;
+end.
