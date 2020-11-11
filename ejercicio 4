@@ -1,0 +1,43 @@
+program potencia;
+uses crt;
+var
+eleccion:integer;
+numero:array[1..3] of integer;
+divisiones:array[1..3] of integer;
+verificacion:array[1..3] of integer;
+begin
+clrscr;
+WriteLn ('------------------------------------------------------------');
+WriteLn ('Bienvenido, este programa determinará si el número de');
+WriteLn ('su elección es potencia de 2, 3 o 5 ');
+WriteLn ('------------------------------------------------------------');
+Textcolor(yellow);
+WriteLn ('Por favor, presione enter para continuar');
+Textcolor(white);
+Readkey;
+begin
+   writeln('Introduzca el número de su preferencia');
+   readln(eleccion);
+   end;
+   begin
+   numero[1]:= 2;
+   divisiones[1]:= eleccion div numero[1];
+   verificacion[1]:= eleccion mod numero[1];
+   numero[2]:= 3;
+   divisiones[2]:= eleccion div numero[2];
+   verificacion[2]:= eleccion mod numero[2];
+   numero[3]:= 5;
+   divisiones[3]:= eleccion div numero[3];
+   verificacion[3]:= eleccion mod numero[3];
+   end;
+   begin
+    if (divisiones[1]<>0) and (verificacion[1]=0) then
+       writeln('Es potencia de 2')
+   else if (divisiones[2]<>0) and (verificacion[2]=0) then
+       writeln('Es potencia de 3')
+   else   if (divisiones[3]<>0) and (verificacion[3]=0) then
+       writeln('Es potencia de 5')
+   else
+    writeln('No es potencia de ninguno')
+   end;
+end.
