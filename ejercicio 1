@@ -1,0 +1,32 @@
+Program Fibonaccio;
+Uses crt;
+Var
+P:Integer;
+Q:Integer;
+R:Integer;
+T:Integer;
+S:integer;
+procedure serie_Fibonaccio;
+Begin
+Q:=0;
+R:=1;
+End;
+Begin
+Begin
+WriteLn ('Introducir un número para conocer si es de la serie Fibonaccio ');
+ReadLn (s);
+WriteLn;
+Serie_Fibonaccio;
+End;
+Repeat
+Begin
+P:=q+r;
+Q:=p+r;
+R:=q+p;
+End;
+Until (q>=s) or (r>=s) or (p>=s);
+Begin
+If (s=q) or (s=r) or (s=p) then
+WriteLn ('El número ', s, ' Se ubica en la serie de Fibonaccio');
+End;
+End.
