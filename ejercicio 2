@@ -1,0 +1,52 @@
+program colors;
+uses crt;
+var
+divisor:array[1..5] of Int64;
+numero:Integer;
+funcion:array[1..5] of Integer;
+begin
+Clrscr;
+Textcolor(yellow);
+writeln( 'Bienvenido, presiona enter para continuar');
+Readkey;
+Textcolor(white);
+  begin
+  divisor[1]:=13;
+  divisor[2]:=7;
+  divisor[3]:=5;
+  divisor[4]:=3;
+  divisor[5]:=2;
+  end;
+  begin
+  writeln('Saber si el número es divisible entre 13, 7, 5, 3 o 2');
+  writeln('Ingrese un número');
+  readln(numero);
+  end;
+  begin
+  funcion[1]:=numero mod divisor[1];
+  funcion[2]:=numero mod divisor[2];
+  funcion[3]:=numero mod divisor[3];
+  funcion[4]:=numero mod divisor[4];
+  funcion[5]:=numero mod divisor[5];
+  end;
+  begin
+   textcolor(brown);
+  if (funcion[1]=0) then
+   writeln('Es divisible entre 13: ',numero);
+   textcolor(green);
+  if (funcion[2]=0) then
+    writeln('Es divisible entre 7: ',numero);
+    textcolor(red);
+  if (funcion[3]=0) then
+    writeln('Es divisible entre 5: ',numero);
+    textcolor(blue);
+  if (funcion[4]=0) then
+     writeln('Es divisible entre 3: ',numero);
+     textcolor(yellow);
+  if (funcion[5]=0) then
+      writeln('Es divisible entre 2: ',numero);
+      textcolor(white);
+  if (funcion[1]<>0) and (funcion[2]<>0) and (funcion[3]<>0) and (funcion[4]<>0) and (funcion[5]<>0) then
+      writeln('NO ES DIVISIBLE POR NINGÚN NÚMERO');
+  end;
+end.
